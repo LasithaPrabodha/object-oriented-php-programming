@@ -1,0 +1,24 @@
+<div class="container mt-4">
+    <h1>Car List</h1>
+
+    <?php
+    if (array_key_exists('cars', $this->view_data)) {
+        $table = '<table border=1>';
+        $table .= '<tr>';
+        foreach (array_keys($this->view_data['cars'][0]) as $column) {
+            $table .= '<th>' . $column . '</th>';
+        }
+        $table .=  '</tr>';
+        foreach ($this->view_data['cars'] as $car) {
+            $table .=  "<tr>";
+            foreach (array_keys($car) as $key) {
+
+                $table .= '<td>' . $car[$key] . '</td>';
+            }
+            $table .=  "</tr>";
+        }
+
+        echo $table;
+    }
+    ?>
+</div> 

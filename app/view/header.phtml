@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">OO PHP Programming</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item <?= $this->view_data['location'] === 'home' ? "active" : '' ?>">
+                    <a class="nav-link" href="/home">Home</a>
+                </li>
+                <li class="nav-item <?= $this->view_data['location'] === 'cars' ? "active" : '' ?>">
+                    <a class="nav-link" href="/car">Cars</a>
+                </li>
+                <li class="nav-item <?= $this->view_data['location'] === 'about' ? "active" : '' ?>">
+                    <a class="nav-link" href="/home/about">About Us</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav> 
